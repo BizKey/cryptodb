@@ -68,7 +68,7 @@ docker compose down -v  # остановить И удалить ВСЕ данн
 |---|---|
 | 1 ГБ RAM | PostgreSQL-параметры под малый объём (`shared_buffers=128MB`, `max_connections=50`, `work_mem=4MB`…); контейнеру выделено не более 512 МБ (`mem_limit: 512m`) — остальное ОС и Docker |
 | 1 ядро CPU | `cpus: 1.0`; `autovacuum_max_workers=2`; редкие чекпоинты (`checkpoint_timeout=15min`) — меньше фоновой работы |
-| 10 ГБ диск | лёгкий образ `postgres:16-alpine`; ротация логов Docker (10 МБ × 3); ограниченный WAL (`max_wal_size=256MB`); данные — только в одном томе |
+| 10 ГБ диск | лёгкий образ `postgres:18-alpine`; ротация логов Docker (10 МБ × 3); ограниченный WAL (`max_wal_size=256MB`); данные — только в одном томе |
 
 Полный список параметров — в [`db/postgresql.conf`](db/postgresql.conf) с пояснениями.
 

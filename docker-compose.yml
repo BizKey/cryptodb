@@ -9,7 +9,7 @@
 # Список услуг: db (PostgreSQL)
 services:
   db:
-    image: ${POSTGRES_IMAGE:-postgres:16-alpine}
+    image: ${POSTGRES_IMAGE:-postgres:18-alpine}
     container_name: cryptodb-postgres
     restart: unless-stopped
 
